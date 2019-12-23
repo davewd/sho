@@ -3,7 +3,6 @@
 
 """Tests for `sho` package."""
 
-import pytest
 import unittest
 
 from sho import sho
