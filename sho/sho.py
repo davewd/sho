@@ -13,6 +13,13 @@ def display_with_pivotablejs(obj):
         :param obj: table object to display,
     """
 
+def display_html_ouput(obj):
+    """
+    Function to convert a variable to a pivotable js
+        :param obj: table object to display,
+    """
+    print("HTML")
+
 def get_output_type_for_object(obj):
     """
     If Default selected allow the community to decide the best way to show your variable for you !

@@ -35,7 +35,7 @@ class TestSho(unittest.TestCase):
     def tearDown(self):
         """Tear down test fixtures, if any."""
 
-    def test_simple(response):
+    def test_simple_import():
         """Sample pytest test function with the pytest fixture as an argument."""
         import sho
         example_string = "test_dd"
