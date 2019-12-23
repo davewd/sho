@@ -28,6 +28,11 @@ def output( obj, output_type):
     """
     if output_type == OUTPUT_TYPE.DEFAULT.value :
         output_type = get_output_type_for_object(obj)
+    
+    switcher = {OUTPUT_TYPE.HTML.value : display_html_output}
+    switcher[output_type](obj)
+
+    
 
 """Main module."""
 def w(obj, output_type=OUTPUT_TYPE.DEFAULT.value):
@@ -36,7 +41,4 @@ def w(obj, output_type=OUTPUT_TYPE.DEFAULT.value):
         :param obj: the variable to show
         :param output_type=OUTPUT_TYPE.DEFAULT.value: ability to force output types under certain scenarios
     """
-    if hasattr(obj, "to_string"):
-        output( obj.toString(), output_type)
-
     output(obj,output_type);
