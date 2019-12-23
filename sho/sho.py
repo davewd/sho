@@ -6,11 +6,12 @@ import sys
 # this is a pointer to the module object instance itself.
 this = sys.modules[__name__]
 
-def display_with_string(obj):
+def display_string_output(obj):
     """
     Display a string
         :param obj: 
     """
+    print(obj)
 
 def display_with_pivotablejs(obj):
     """
@@ -41,7 +42,8 @@ def output( obj, output_type):
     if output_type == OUTPUT_TYPE.DEFAULT.value :
         output_type = get_output_type_for_object(obj)
     
-    switcher = {OUTPUT_TYPE.HTML.value : this.display_html_output}
+    switcher = {    OUTPUT_TYPE.HTML.value : this.display_html_output,
+                    OUTPUT_TYPE.STRING.value : this.display_string_output}
     switcher[output_type](obj)
 
 
