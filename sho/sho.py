@@ -18,7 +18,7 @@ def display_with_pivotablejs(obj):
         :param obj: table object to display,
     """
 
-def display_html_ouput(obj):
+def display_html_output(obj):
     """
     Function to convert a variable to a pivotable js
         :param obj: table object to display,
@@ -40,9 +40,10 @@ def output( obj, output_type):
     """
     if output_type == OUTPUT_TYPE.DEFAULT.value :
         output_type = get_output_type_for_object(obj)
-    html_fn=this["display_html_output"]
-    switcher = {OUTPUT_TYPE.HTML.value : html_fn}
+    
+    switcher = {OUTPUT_TYPE.HTML.value : this.display_html_output}
     switcher[output_type](obj)
+
 
 """Main module."""
 def w(obj, output_type=OUTPUT_TYPE.DEFAULT.value):
