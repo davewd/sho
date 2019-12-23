@@ -3,15 +3,11 @@
 
 """Tests for `sho` package."""
 
+import sys
 import unittest
+from StringIO import StringIO
 
 from sho import sho
-try:
-    from StringIO import StringIO
-except ImportError:
-    from io import StringIO
-
-import sys
 
 class Capturing(list):
     def __enter__(self):
@@ -41,4 +37,3 @@ class TestSho(unittest.TestCase):
         with Capturing() as output:
             sho.w(example_string)
         assert output == example_string
-
