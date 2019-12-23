@@ -32,7 +32,6 @@ class TestSho(unittest.TestCase):
 
     def test_simple_import(self):
         """Sample pytest test function with the pytest fixture as an argument."""
-        import sho
         example_string = "test_dd"
         with Capturing() as output:
             sho.w(example_string)
