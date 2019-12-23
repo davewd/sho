@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from constants import OUTPUT_TYPE
+from sho.constants import OUTPUT_TYPE
 
 def display_with_string(obj):
     """
