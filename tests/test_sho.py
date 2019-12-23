@@ -35,4 +35,4 @@ class TestSho(unittest.TestCase):
         example_string = "test_dd"
         with Capturing() as output:
             sho.w(example_string)
-        assert output == example_string
+        assert output[0] == example_string
