@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 from sho.constants import OUTPUT_TYPE
+# db.py
+import sys
+
+# this is a pointer to the module object instance itself.
+this = sys.modules[__name__]
 
 def display_with_string(obj):
     """
@@ -35,8 +40,8 @@ def output( obj, output_type):
     """
     if output_type == OUTPUT_TYPE.DEFAULT.value :
         output_type = get_output_type_for_object(obj)
-    
-    switcher = {OUTPUT_TYPE.HTML.value : display_html_output}
+    html_fn=this.display_html_output
+    switcher = {OUTPUT_TYPE.HTML.value : html_fn}
     switcher[output_type](obj)
 
 """Main module."""
