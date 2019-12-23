@@ -7,7 +7,7 @@ import sys
 import unittest
 from io import StringIO
 
-from sho import sho
+import sho
 
 class Capturing(list):
     def __enter__(self):
