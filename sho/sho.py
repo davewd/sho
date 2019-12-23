@@ -40,7 +40,7 @@ def output( obj, output_type):
     """
     if output_type == OUTPUT_TYPE.DEFAULT.value :
         output_type = get_output_type_for_object(obj)
-    html_fn=this.display_html_output
+    html_fn=this["display_html_output"]
     switcher = {OUTPUT_TYPE.HTML.value : html_fn}
     switcher[output_type](obj)
 
