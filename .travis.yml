@@ -7,13 +7,13 @@ script: tox
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
-  user: davewd
+  user: __token__
   password:
-    secure: mjNQSjg+a8sajVaG5rdROfnE0DWgAyn/3Zzb4u7r/7/6/9ixv8XvcTvHhzJ5uG9mMyT3Tgk2yisiJDcR7qF/vEb17vahCKGb32vgnLWVjaiYEpN4/ePGbvl3QKO8+sGljp2XYQzX0CZAiQvXGzwq4dkjKNULDojAD0J03whGTDqq2rfEmTQHZyKenPFGs6cjiU+TCTFQCf9wsJmTFsSIQfmbBXbya9oEmSOJyUL64AEUCJ+ryJQnc44M1TFhlwcLfQ5bOjRXe9EAvn/zo5GzrC2RzufQvQUj8B+T8DSRg/KPnvxzuHFAYfeSAGdxQqDis4Bb8mpVZVmlzGJ+T1Ov6yAWge7+dLhW42BgsbNF4h2doRJnYD8MR3N8EVj7GWZHpjDOuIGHEjUACsUTrvjp1znEGzP6dPI8sDrmVVnIfltH1i4hYTnmKO/wtIQZ2Asy27GgsAwKL/J6TZ6KL3mFDTAIVqsbQjEFFZs1u4jUyXOuGcRd3HmGBpJOJYFT/ozVxafpdKkaJvKKG5T+6Bzuer3FpAHWtXUyV3uNkFsMJEKhZUDpkZAYxqjriahMixSOuF+fNOR2Isf7a5YNizr8hdr5EIGBQ/aK5SjjGKHHz8yR5Ezka9RoVDB3xAwcpj4fKVWTXiiexmyrukeltQkYh0LsGheO6L/9Ra59bjEZZEE=
+    secure: wIF1t3YzQrrCTDO7lY69iqYTm3N1dAbNRTyUJcZf+xLEQFZcQM1cXJUrX+FENbGhNEy2B8WzdM1wkD5tG0qHbdS9AlrG+zoBcQbGh83l5Ew6OWK3Bl4dffyOHk1dmdMfmgrVvRDoG04ibgQFLEUIIKsDOR0jbKMHKrpY2CCY1xsw6UlwDwX9KwXlU2d4hJr+16SLtJDB1aMhF/aJ7ZtRvQsezrGPULr99/xG6tjJLKMXndTduDs6l+TmZzsvoS5MjTpV/a5BPy1gZG4HS1SbAOBgpHC0cW6OT1SWz+PQ7ikRz3Q6xTh9AqbnrQh3VF8U6xubYZAgEOGHpYdlMmegm+11jbXYqzAl25ZDpCG/XYJdibwGuJWlrtFK5mUzNmM5L3GKgqnTQBA2AFuXHvOQZV+0vfp6eQ5Czg0il0rdnIACrXPYPGOQQSkV+5Tvuoiokfb7nr/aFTwM+TatdfG6/7lz0Y5fKfew5cpAIKswlgernsZEHHtacQ/QRWvoVFtatz4MfelNbgAXnN8wkCReZn2eSgl3qQE/0ajj/b67jDXpIyhn3jjuSNBPzOxV+EcaJhYP85pRRiBIMIQRAP8o5TQU/d9LjQF6bhg+WViuhxkMBguWD1Io2CNfNeMZJndfaLK1DbunL1mLgH61686Pv3k5MCP4DOKqqpZRR/iKYaw=
   on:
     tags: true
     repo: davewd/sho
     python: 3.6
 after_success:
-  - pip install codecov
-  - codecov
+- pip install codecov
+- codecov
