@@ -18,9 +18,8 @@ setup_requirements = ['pytest-runner', ]
 test_requirements = ['unittest>=3', ]
 
 setup(
-    author="Dave Dawson",
+    author="David Dawson",
     author_email='davedawson.co@gmail.com',
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
