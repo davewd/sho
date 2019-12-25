@@ -36,3 +36,8 @@ class TestSho(unittest.TestCase):
         with Capturing() as output:
             sho.w(example_string)
         assert output[0] == example_string
+
+    def test_dataframe_as_html(self):
+        import seaborn as sns
+        iris_df = sns.load_dataset('iris')
+        sho.w(iris_df)
