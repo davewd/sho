@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from sho.constants import OUTPUT_TYPE
-from sho.sho import output
+from sho.sho import output, output_detail
 
 """Top-level package for sho."""
 
