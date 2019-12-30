@@ -1,0 +1,4 @@
+pandas==0.25.3
+pivottablejs==0.9.0
+pandas_profiling==2.3.0
+seaborn==0.9.0
