@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
-from sho.constants import OUTPUT_TYPE
+import os
 # db.py
 import sys
-import pandas as pd
 import tempfile
-from pivottablejs import pivot_ui
 import webbrowser
+
+import pandas as pd
+from pivottablejs import pivot_ui
+from sho.constants import OUTPUT_TYPE
+import pandas_profiling
 
 # this is a pointer to the module object instance itself.
 this = sys.modules[__name__]
@@ -29,12 +32,24 @@ def display_dataframe_with_pivotablejs(obj):
     Function to convert a variable to a pivotable js
         :param obj: table object to display,
     """
-    tf = tempfile.NamedTemporaryFile(delete=False, prefix="sho_", suffix=".html")
+    tf = tempfile.NamedTemporaryFile(prefix="sho_", suffix=".html")
     file_path = tf.name
     cols = list(obj.columns.values)
-    pivot_ui(obj, outfile_path=file_path, cols=cols)
+    pivot_ui(obj, outfile_path=file_path, vals=cols)
     browser= webbrowser.get('chrome')
-    browser.open(file_path)
+    browser.open('file://' + os.path.realpath(file_path))
+
+def display_dataframe_with_pandas_profiling(obj):
+    """
+    Function to convert a variable to a pivotable js
+        :param obj: table object to display,
+    """
+    tf = tempfile.NamedTemporaryFile(prefix="sho_", suffix=".html")
+    file_path = tf.name
+    profile = obj.profile_report(title='Pandas Profiling Report')
+    profile.to_file(output_file=file_path)  
+    browser= webbrowser.get('chrome')
+    browser.open('file://' + os.path.realpath(file_path))
 
 def display_html_output(obj):
     """
@@ -67,12 +82,15 @@ def output( obj, output_type):
                     OUTPUT_TYPE.STRING.value : this.display_string_output}
     switcher[output_type](obj)
 
-
-"""Main module."""
-def w(obj, output_type=OUTPUT_TYPE.DEFAULT.value):
+def output_detail( obj, output_type):
     """
-    Main function called, defaults to 
-        :param obj: the variable to show
-        :param output_type=OUTPUT_TYPE.DEFAULT.value: ability to force output types under certain scenarios
+    Function to map to desired output type
+        :param obj: variable to display
+        :param output_type: desired output type
     """
-    output(obj,output_type);
+    if output_type == OUTPUT_TYPE.DEFAULT.value :
+        output_type = get_output_type_for_object(obj)
+    
+    switcher = {    OUTPUT_TYPE.HTML.value : this.display_detailed_html_output,
+                    OUTPUT_TYPE.STRING.value : this.display_detailed_string_output}
+    switcher[output_type](obj)
