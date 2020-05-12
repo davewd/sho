@@ -7,7 +7,7 @@ import sys
 import unittest
 from io import StringIO
 
-import sho
+#import sho
 import logging
 
 logger = logging.info(__name__)
