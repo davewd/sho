@@ -41,9 +41,9 @@ class TestSho(unittest.TestCase):
     def test_simple_import(self):
         """Sample pytest test function with the pytest fixture as an argument."""
         example_string = "test_dd"
-        with Capturing() as output:
-            sho.w(example_string)
-        logger.info(output)
+        #with Capturing() as output:
+        #    sho.w(example_string)
+        #logger.info(output)
         #assert output[0] == example_string
 
     def test_dataframe_as_html(self):
