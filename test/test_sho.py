@@ -8,8 +8,16 @@ import unittest
 from io import StringIO
 
 import sho
+import logging
+
+logger = logging.info(__name__)
 
 class Capturing(list):
+    """Capturing class for unittest
+
+    Arguments:
+        list {[type]} -- [description]
+    """
     def __enter__(self):
         self._stdout = sys.stdout
         sys.stdout = self._stringio = StringIO()
@@ -35,6 +43,7 @@ class TestSho(unittest.TestCase):
         example_string = "test_dd"
         with Capturing() as output:
             sho.w(example_string)
+        logger.info(output)
         assert output[0] == example_string
 
     def test_dataframe_as_html(self):
