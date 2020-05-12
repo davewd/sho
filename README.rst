@@ -30,7 +30,7 @@ Visualize python objects in the best way possible
 Features
 --------
 
-* TODO
+* to test the unit tests run : python -m unittest test.test_sho
 
 Credits
 -------
