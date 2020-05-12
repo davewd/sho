@@ -4,30 +4,34 @@ import os
 import sys
 import tempfile
 import webbrowser
+from typing import Any
 
 import pandas as pd
 from pivottablejs import pivot_ui
 from sho.constants import OUTPUT_TYPE
 import pandas_profiling
+import logging
+
+logger = logging.info(__name__)
 
 # this is a pointer to the module object instance itself.
 this = sys.modules[__name__]
 
-def display_as_string_via_html(obj):
+def display_as_string_via_html(obj: Any):
     """
     Display a variable as a defaulty HTML
         :param obj: the object to be displayed.
     """
 
 
-def display_string_output(obj):
+def display_string_output(obj: Any):
     """
     Display a string
         :param obj: 
     """
     print(obj)
 
-def display_dataframe_with_pivotablejs(obj):
+def display_dataframe_with_pivotablejs(obj: Any):
     """
     Function to convert a variable to a pivotable js
         :param obj: table object to display,
@@ -39,7 +43,7 @@ def display_dataframe_with_pivotablejs(obj):
     browser= webbrowser.get('chrome')
     browser.open('file://' + os.path.realpath(file_path))
 
-def display_dataframe_with_pandas_profiling(obj):
+def display_dataframe_with_pandas_profiling(obj: Any):
     """
     Function to convert a variable to a pivotable js
         :param obj: table object to display,
@@ -51,7 +55,7 @@ def display_dataframe_with_pandas_profiling(obj):
     browser= webbrowser.get('chrome')
     browser.open('file://' + os.path.realpath(file_path))
 
-def display_html_output(obj):
+def display_html_output(obj: Any):
     """
     Function to convert a variable to a pivotable js
         :param obj: table object to display,
@@ -62,14 +66,14 @@ def display_html_output(obj):
     else:
         display_as_string_via_html(obj)
 
-def get_output_type_for_object(obj):
+def get_output_type_for_object(obj: Any):
     """
     If Default selected allow the community to decide the best way to show your variable for you !
         :param obj: variable to display
     """
     return OUTPUT_TYPE.HTML.value
 
-def output( obj, output_type):
+def output( obj: Any, output_type: str):
     """
     Function to map to desired output type
         :param obj: variable to display
@@ -82,7 +86,7 @@ def output( obj, output_type):
                     OUTPUT_TYPE.STRING.value : this.display_string_output}
     switcher[output_type](obj)
 
-def output_detail( obj, output_type):
+def output_detail( obj: Any, output_type: str):
     """
     Function to map to desired output type
         :param obj: variable to display
