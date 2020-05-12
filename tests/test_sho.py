@@ -38,6 +38,11 @@ class TestSho(unittest.TestCase):
         assert output[0] == example_string
 
     def test_dataframe_as_html(self):
+        """Ensure a simple dataframe can be rendered with html"""
         import seaborn as sns
         iris_df = sns.load_dataset('iris')
         sho.w(iris_df)
+
+
+if __name__ == "__main__":
+    unittest.main()
