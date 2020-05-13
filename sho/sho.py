@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
+import logging
 import os
-# db.py
+
 import sys
 import tempfile
 import webbrowser
 from typing import Any
 
 import pandas as pd
+import pandas_profiling
 from pivottablejs import pivot_ui
 from sho.constants import OUTPUT_TYPE
-import pandas_profiling
-import logging
 
 logger = logging.info(__name__)
 
