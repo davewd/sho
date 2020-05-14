@@ -8,7 +8,7 @@ import webbrowser
 from typing import Any
 
 import pandas as pd
-import pandas_profiling
+
 from pivottablejs import pivot_ui
 from sho.constants import OUTPUT_TYPE
 
@@ -19,7 +19,7 @@ this = sys.modules[__name__]
 
 def display_as_string_via_html(obj: Any):
     """
-    Display a variable as a defaulty HTML
+    Display a variable as a default HTML
         :param obj: the object to be displayed.
     """
 
@@ -36,18 +36,22 @@ def display_dataframe_with_pivotablejs(obj: Any):
     Function to convert a variable to a pivotable js
         :param obj: table object to display,
     """
-    tf = tempfile.NamedTemporaryFile(prefix="sho_", suffix=".html")
+    tf = tempfile.NamedTemporaryFile(prefix="sho_", suffix=".html", delete=False)
     file_path = tf.name
     cols = list(obj.columns.values)
+    print(f"File Name : {tf.name}")
     pivot_ui(obj, outfile_path=file_path, vals=cols)
-    browser= webbrowser.get('chrome')
+    browser = webbrowser.get('chrome')
     browser.open('file://' + os.path.realpath(file_path))
+    sleep(5)
+    logger.info(f"File Name : {tf.name}")
 
 def display_dataframe_with_pandas_profiling(obj: Any):
     """
     Function to convert a variable to a pivotable js
         :param obj: table object to display,
     """
+    import pandas_profiling
     tf = tempfile.NamedTemporaryFile(prefix="sho_", suffix=".html")
     file_path = tf.name
     profile = obj.profile_report(title='Pandas Profiling Report')
