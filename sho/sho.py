@@ -1,7 +1,15 @@
-# -*- coding: utf-8 -*-
+__author__ = "David Dawson"
+__copyright__ = "Copyright 2020, David Dawson"
+__credits__ = ["David Dawson"]
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = "Dave Dawson"
+__email__ = "davedawson.co@gmail.com"
+__status__ = "Production"
+
 import logging
 import os
-
+import time
 import sys
 import tempfile
 import webbrowser
@@ -41,9 +49,13 @@ def display_dataframe_with_pivotablejs(obj: Any):
     cols = list(obj.columns.values)
     print(f"File Name : {tf.name}")
     pivot_ui(obj, outfile_path=file_path, vals=cols)
-    browser = webbrowser.get('chrome')
-    browser.open('file://' + os.path.realpath(file_path))
-    sleep(5)
+    try: 
+        browser = webbrowser.get('chrome')
+        browser.open('file://' + os.path.realpath(file_path))
+    except Exception as e:
+        logger.info(f"Couldn't find chrome !")
+        webbrowser.open('file://' + os.path.realpath(file_path))
+    time.sleep(5)
     logger.info(f"File Name : {tf.name}")
 
 def display_dataframe_with_pandas_profiling(obj: Any):
