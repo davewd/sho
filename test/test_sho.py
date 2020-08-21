@@ -12,22 +12,6 @@ import logging
 
 logger = logging.info(__name__)
 
-class Capturing(list):
-    """Capturing class for unittest
-
-    Arguments:
-        list {[type]} -- [description]
-    """
-    def __enter__(self):
-        self._stdout = sys.stdout
-        sys.stdout = self._stringio = StringIO()
-        return self
-    def __exit__(self, *args):
-        self.extend(self._stringio.getvalue().splitlines())
-        del self._stringio    # free up some memory
-        sys.stdout = self._stdout
-
-
 
 class TestSho(unittest.TestCase):
     """Tests for Sho package."""
@@ -48,6 +32,10 @@ class TestSho(unittest.TestCase):
 
     def test_dataframe_as_html(self):
         """Ensure a simple dataframe can be rendered with html"""
+        import pandas as pd
+        import sho
+        df = pd.DataFrame([{"a":"b"}])
+        sho.w(df)
         #import seaborn as sns
         #iris_df = sns.load_dataset('iris')
         #sho.w(iris_df)

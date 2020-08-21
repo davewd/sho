@@ -76,7 +76,7 @@ def display_html_output(obj: Any):
     Function to convert a variable to a pivotable js
         :param obj: table object to display,
     """
-    if type(obj) == pd.core.frame.DataFrame :
+    if isinstance(obj, pd.core.frame.DataFrame) :
         display_dataframe_with_pivotablejs(obj)
         # Create more elif's here !
     else:
