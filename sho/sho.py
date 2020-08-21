@@ -50,7 +50,7 @@ def display_dataframe_with_pivotablejs(obj: Any):
     print(f"File Name : {tf.name}")
     pivot_ui(obj, outfile_path=file_path, vals=cols)
     try: 
-        browser = webbrowser.get('chrome')
+        browser = webbrowser.get()
         browser.open('file://' + os.path.realpath(file_path))
     except Exception as e:
         logger.info(f"Couldn't find chrome !")

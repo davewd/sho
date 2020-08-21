@@ -6,12 +6,19 @@
 import sys
 import unittest
 from io import StringIO
-
+import webbrowser
 #import sho
 import logging
 
 logger = logging.info(__name__)
 
+def skipWhenNoskipWhenNowWebbroswer():
+    try:
+        webbrowser.get()
+    except webbrowser.Error:
+        return unittest.skip("Webrowser Error")
+    
+    return unittest._id
 
 class TestSho(unittest.TestCase):
     """Tests for Sho package."""
@@ -30,6 +37,7 @@ class TestSho(unittest.TestCase):
         #logger.info(output)
         #assert output[0] == example_string
 
+    @unittest.skipWhenNoskipWhenNowWebbroswer()
     def test_dataframe_as_html(self):
         """Ensure a simple dataframe can be rendered with html"""
         import pandas as pd
