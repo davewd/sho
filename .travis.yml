@@ -5,7 +5,7 @@ python:
 - 3.6
 env:
   global:
-    - LLVM_VERSION=9.0
+    - LLVM_VERSION=9.0.0
     - LLVM_CONFIG="llvm-config-${LLVM_VERSION}"
 install: pip install -U tox-travis
 script: tox
