@@ -20,7 +20,7 @@ import pandas as pd
 from pivottablejs import pivot_ui
 from sho.constants import OUTPUT_TYPE
 
-logger = logging.info(__name__)
+logger = logging.getLogger(__name__)
 
 # this is a pointer to the module object instance itself.
 this = sys.modules[__name__]

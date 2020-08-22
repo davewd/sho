@@ -3,10 +3,6 @@ python:
 - 3.8
 - 3.7
 - 3.6
-#env:
-#  global:
-#    - LLVM_VERSION=9.0.0
-#    - LLVM_CONFIG="llvm-config-${LLVM_VERSION}"
 dist: trusty
 addons:
   homebrew:
