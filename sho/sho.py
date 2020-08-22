@@ -50,7 +50,7 @@ def display_dataframe_with_pivotablejs(obj: Any):
     print(f"File Name : {tf.name}")
     pivot_ui(obj, outfile_path=file_path, vals=cols)
     try: 
-        browser = webbrowser.get('chrome')
+        browser = webbrowser.get()
         browser.open('file://' + os.path.realpath(file_path))
     except Exception as e:
         logger.info(f"Couldn't find chrome !")
@@ -76,7 +76,7 @@ def display_html_output(obj: Any):
     Function to convert a variable to a pivotable js
         :param obj: table object to display,
     """
-    if type(obj) == pd.core.frame.DataFrame :
+    if isinstance(obj, pd.core.frame.DataFrame) :
         display_dataframe_with_pivotablejs(obj)
         # Create more elif's here !
     else:
