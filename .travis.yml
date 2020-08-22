@@ -7,7 +7,14 @@ python:
 #  global:
 #    - LLVM_VERSION=9.0.0
 #    - LLVM_CONFIG="llvm-config-${LLVM_VERSION}"
-install: pip install -U tox-travis
+dist: trusty
+addons:
+  homebrew:
+    packages:
+    - llvm@10
+    update: true
+install: 
+  - pip install -U tox-travis
 script: tox
 deploy:
   provider: pypi
