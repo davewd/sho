@@ -19,7 +19,7 @@ sho
      :alt: Updates
 
 .. image:: https://img.shields.io/pypi/dm/sho
-     :target: https://pypi.org/project/sho/
+     :target: https://pypistats.org/packages/sho
      :alt: PyPI - Downloads
 
 
