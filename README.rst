@@ -18,9 +18,9 @@ sho
      :target: https://pyup.io/repos/github/davewd/sho/
      :alt: Updates
 
-
-
-Visualize python objects in the best way possible
+.. image:: https://img.shields.io/pypi/dm/sho
+     :target: https://pypi.org/project/sho/
+     :alt: PyPI - Downloads
 
 
 * Free software: MIT license
