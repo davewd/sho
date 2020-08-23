@@ -4,5 +4,6 @@
     "conventionalCommits.scopes": [
         "w",
         "package"
-    ]
+    ],
+    "restructuredtext.confPath": "${workspaceFolder}/docs"
 }
