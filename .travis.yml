@@ -6,7 +6,7 @@ python:
 addons:
   homebrew:
     packages:
-    - llvm@10
+    - llvm@9
     update: true
 install: 
   - pip install -U tox-travis
