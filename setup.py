@@ -11,7 +11,26 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = [
+"pip==20.2.2",
+"bump2version==1.0.0",
+"llvmlite==0.34.0",
+"wheel==0.35.1",
+"watchdog==0.10.2",
+"flake8==3.8.1",
+"ipython==7.16.0",
+"tox==3.19.0",
+"coverage==5.1",
+"Sphinx==3.2.1",
+"twine==3.1.1",
+"pandas==1.1.1",
+"numpy==1.19.1",
+"pivottablejs==0.9.0",
+"pandas_profiling==2.8.0",
+"seaborn==0.10.1",
+"pytest==6.0.1",
+"pytest-runner==5.2"
+]
 
 setup_requirements = ['pytest-runner', ]
 
@@ -41,6 +60,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/davewd/sho',
-    version='0.4.19',
+    version='0.4.20',
     zip_safe=False,
 )
