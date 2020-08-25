@@ -8,7 +8,6 @@ Welcome to sho's documentation!
    readme
    installation
    usage
-   modules
    contributing
    authors
    history
