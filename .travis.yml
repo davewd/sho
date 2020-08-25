@@ -15,15 +15,16 @@ install:
   - pip install -U tox-travis
 script: tox
 deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: __token__
-  password:
-    secure: wIF1t3YzQrrCTDO7lY69iqYTm3N1dAbNRTyUJcZf+xLEQFZcQM1cXJUrX+FENbGhNEy2B8WzdM1wkD5tG0qHbdS9AlrG+zoBcQbGh83l5Ew6OWK3Bl4dffyOHk1dmdMfmgrVvRDoG04ibgQFLEUIIKsDOR0jbKMHKrpY2CCY1xsw6UlwDwX9KwXlU2d4hJr+16SLtJDB1aMhF/aJ7ZtRvQsezrGPULr99/xG6tjJLKMXndTduDs6l+TmZzsvoS5MjTpV/a5BPy1gZG4HS1SbAOBgpHC0cW6OT1SWz+PQ7ikRz3Q6xTh9AqbnrQh3VF8U6xubYZAgEOGHpYdlMmegm+11jbXYqzAl25ZDpCG/XYJdibwGuJWlrtFK5mUzNmM5L3GKgqnTQBA2AFuXHvOQZV+0vfp6eQ5Czg0il0rdnIACrXPYPGOQQSkV+5Tvuoiokfb7nr/aFTwM+TatdfG6/7lz0Y5fKfew5cpAIKswlgernsZEHHtacQ/QRWvoVFtatz4MfelNbgAXnN8wkCReZn2eSgl3qQE/0ajj/b67jDXpIyhn3jjuSNBPzOxV+EcaJhYP85pRRiBIMIQRAP8o5TQU/d9LjQF6bhg+WViuhxkMBguWD1Io2CNfNeMZJndfaLK1DbunL1mLgH61686Pv3k5MCP4DOKqqpZRR/iKYaw=
-  on:
-    tags: true
-    repo: davewd/sho
-    python: 3.6
+  - provider: pypi
+    distributions: sdist bdist_wheel
+    user: __token__
+    password:
+      secure: wIF1t3YzQrrCTDO7lY69iqYTm3N1dAbNRTyUJcZf+xLEQFZcQM1cXJUrX+FENbGhNEy2B8WzdM1wkD5tG0qHbdS9AlrG+zoBcQbGh83l5Ew6OWK3Bl4dffyOHk1dmdMfmgrVvRDoG04ibgQFLEUIIKsDOR0jbKMHKrpY2CCY1xsw6UlwDwX9KwXlU2d4hJr+16SLtJDB1aMhF/aJ7ZtRvQsezrGPULr99/xG6tjJLKMXndTduDs6l+TmZzsvoS5MjTpV/a5BPy1gZG4HS1SbAOBgpHC0cW6OT1SWz+PQ7ikRz3Q6xTh9AqbnrQh3VF8U6xubYZAgEOGHpYdlMmegm+11jbXYqzAl25ZDpCG/XYJdibwGuJWlrtFK5mUzNmM5L3GKgqnTQBA2AFuXHvOQZV+0vfp6eQ5Czg0il0rdnIACrXPYPGOQQSkV+5Tvuoiokfb7nr/aFTwM+TatdfG6/7lz0Y5fKfew5cpAIKswlgernsZEHHtacQ/QRWvoVFtatz4MfelNbgAXnN8wkCReZn2eSgl3qQE/0ajj/b67jDXpIyhn3jjuSNBPzOxV+EcaJhYP85pRRiBIMIQRAP8o5TQU/d9LjQF6bhg+WViuhxkMBguWD1Io2CNfNeMZJndfaLK1DbunL1mLgH61686Pv3k5MCP4DOKqqpZRR/iKYaw=
+    on:
+      tags: true
+      repo: davewd/sho
+      python: 3.6
+  - provider: readthedocs
 after_success:
 - pip install codecov
 - codecov
