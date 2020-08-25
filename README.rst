@@ -13,6 +13,9 @@ sho
         :target: https://sho.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
+.. image:: https://readthedocs.org/projects/sho/badge/?version=latest
+        :target: https://sho.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
 
 .. image:: https://pyup.io/repos/github/davewd/sho/shield.svg
      :target: https://pyup.io/repos/github/davewd/sho/
