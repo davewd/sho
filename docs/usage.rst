@@ -11,6 +11,6 @@ To use sho in a project::
 
 And all things working a browser should open with something resembling:
 
-. image:: _static/example_table.png
+.. image:: _static/example_table.png
   :width: 400
   :alt: a pivot table example
