@@ -24,7 +24,6 @@ deploy:
       tags: true
       repo: davewd/sho
       python: 3.6
-  - provider: readthedocs
 after_success:
 - pip install codecov
 - codecov
