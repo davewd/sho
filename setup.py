@@ -60,6 +60,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/davewd/sho',
-    version='0.4.22',
+    version='0.4.23',
     zip_safe=False,
 )

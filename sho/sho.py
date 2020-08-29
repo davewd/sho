@@ -48,7 +48,7 @@ def display_dataframe_with_pivotablejs(obj: Any):
     file_path = tf.name
     cols = list(obj.columns.values)
     print(f"File Name : {tf.name}")
-    pivot_ui(obj, outfile_path=file_path, vals=cols)
+    pivot_ui(obj, outfile_path=file_path, rows=cols)
     try: 
         browser = webbrowser.get()
         browser.open('file://' + os.path.realpath(file_path))
