@@ -40,7 +40,6 @@ setup(
     author="David Dawson",
     author_email='davedawson.co@gmail.com',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
@@ -60,6 +59,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/davewd/sho',
-    version='0.4.23',
+    version='0.4.24',
     zip_safe=False,
 )
