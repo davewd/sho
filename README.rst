@@ -29,6 +29,21 @@ sho
 * Free software: MIT license
 * Documentation: https://sho.readthedocs.io.
 
+Why should I care ?
+-------------------
+**Sho aims to be a one line python command to "sho.w()" any variable for easy exploration.**
+
+    import sho
+    
+    sho.w(dataframe)
+
+Which datatypes are currently handled ?
+---------------------------------------
++------------------+---------------+-------------+
+| Datatype         | Visualization | Implemented |
++==================+===============+=============+
+| pandas.DataFrame | pivottable.js | Yes         |
++------------------+---------------+-------------+
 
 Features
 --------
