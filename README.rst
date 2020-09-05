@@ -44,8 +44,8 @@ Which datatypes are currently handled ?
 
 .. _pivottablejs: https://pivottable.js.org
 
-Features
---------
+Development
+-----------
 
 * to test the unit tests run : python -m unittest test.test_sho
 
