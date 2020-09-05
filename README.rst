@@ -42,8 +42,10 @@ Which datatypes are currently handled ?
 +------------------+---------------+-------------+
 | Datatype         | Visualization | Implemented |
 +==================+===============+=============+
-| pandas.DataFrame | pivottable.js | Yes         |
+| pandas.DataFrame | pivottablejs_ | Yes         |
 +------------------+---------------+-------------+
+
+.. _pivottablejs: https://pivottable.js.org
 
 Features
 --------
