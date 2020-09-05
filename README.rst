@@ -25,17 +25,8 @@ sho
      :target: https://pypistats.org/packages/sho
      :alt: PyPI - Downloads
 
-:Authors:
-    davewd_
 
-:Version: 1.0 of 2020/08/26
-:Dedication: To my family.
-:License: "Free software: MIT license"
-:Documentation: https://sho.readthedocs.io.
-
-.. _davewd: http://www.github.com/davewd
-
-Why should I care ?
+What is sho?
 -------------------
 **Sho aims to be a one line python command to "sho.w()" any variable for easy exploration**
 
@@ -60,6 +51,16 @@ Features
 
 Credits
 -------
+
+:Authors:
+    davewd_
+
+:Version: 1.0 of 2020/08/26
+:Dedication: To my family.
+:License: "Free software: MIT license"
+:Documentation: https://sho.readthedocs.io.
+
+.. _davewd: http://www.github.com/davewd
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
