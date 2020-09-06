@@ -28,7 +28,7 @@ sho
 
 What is sho?
 -------------------
-**Sho aims to be a one line python command to "sho.w()" any variable for easy exploration**
+**Sho is a one line python command to "sho.w()" any variable for easy exploration**
 
     import sho
     
