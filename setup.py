@@ -18,7 +18,7 @@ requirements = [
 "wheel==0.35.1",
 "watchdog==0.10.2",
 "flake8==3.8.1",
-"ipython==7.16.0",
+"ipython==7.31.1",
 "tox==3.19.0",
 "coverage==5.1",
 "Sphinx==3.2.1",
