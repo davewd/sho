@@ -24,7 +24,7 @@ requirements = [
 "Sphinx==3.2.1",
 "twine==3.1.1",
 "pandas==1.1.1",
-"numpy==1.19.1",
+"numpy==1.22.0",
 "pivottablejs==0.9.0",
 "pandas_profiling==2.8.0",
 "seaborn==0.10.1",
