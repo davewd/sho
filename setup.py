@@ -15,7 +15,7 @@ requirements = [
 "pip==20.2.2",
 "bump2version==1.0.0",
 "llvmlite==0.34.0",
-"wheel==0.35.1",
+"wheel==0.38.1",
 "watchdog==0.10.2",
 "flake8==3.8.1",
 "ipython==7.16.0",
