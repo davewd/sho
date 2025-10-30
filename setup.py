@@ -12,7 +12,7 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-"pip==20.2.2",
+"pip==25.3",
 "bump2version==1.0.0",
 "llvmlite==0.34.0",
 "wheel==0.35.1",
