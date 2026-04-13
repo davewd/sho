@@ -28,7 +28,7 @@ requirements = [
 "pivottablejs==0.9.0",
 "pandas_profiling==2.8.0",
 "seaborn==0.10.1",
-"pytest==6.0.1",
+"pytest==9.0.3",
 "pytest-runner==5.2"
 ]
 
